@@ -21,15 +21,11 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
-  karmaMult: 0.4 #TBD content
 
 - type: startingGear
   id: SecurityOfficerGear
   equipment:
-    eyes: ClothingEyesGlassesSecurity
     ears: ClothingHeadsetSecurity
-    pocket1: WeaponPistolMk58
   storage:
     back:
     - Flash
-    - MagazinePistol

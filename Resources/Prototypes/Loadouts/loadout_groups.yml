@@ -146,6 +146,13 @@
   - CaptainWintercoat
 
 - type: loadoutGroup
+  id: CaptainEyewear
+  name: loadout-group-captain-eyewear
+  loadouts:
+  - CaptainGlasses
+  - CaptainHud
+
+- type: loadoutGroup
   id: HoPHead
   name: loadout-group-hop-head
   minLimit: 0
@@ -869,7 +876,7 @@
   name: loadout-group-scientist-head
   minLimit: 0
   loadouts:
-  - RoboticistCap
+#  - RoboticistCap Only for roboticist
   - SkullBandana
   - ScientificBeret
 
@@ -926,7 +933,7 @@
   loadouts:
   - LatexGloves
   - PurpleGloves
-  - RobohandsGloves
+#  - RobohandsGloves Only for roboticist
 
 - type: loadoutGroup
   id: ScientistPDA
@@ -943,6 +950,13 @@
   - WhiteJumpskirt
 
 # Security
+- type: loadoutGroup
+  id: SecurityWeapon
+  name: loadout-group-security-weapon
+  loadouts:
+  - SecurityTaser
+  - SecurityDominator
+
 - type: loadoutGroup
   id: HeadofSecurityHead
   name: loadout-group-head-of-security-head
@@ -1000,11 +1014,79 @@
   - WardenArmoredWinterCoat
 
 - type: loadoutGroup
+  id: SecurityEyewear
+  name: loadout-group-security-eyewear
+  loadouts:
+  - SecurityGlasses
+  - SecurityHud
+
+- type: loadoutGroup
+  id: BrigmedicHead
+  name: loadout-group-brigmedic-head
+  minLimit: 0
+  loadouts:
+  - BrigmedicBeret
+  - SecurityHelmet
+  - CorpsmanBeret #Starlight
+
+- type: loadoutGroup
+  id: BrigmedicJumpsuit
+  name: loadout-group-brigmedic-jumpsuit
+  loadouts:
+  - JumpsuitBrigmedic
+  - JumpsuitCorpsman
+  - JumpskirtBrigmedic
+  - JumpskirtCorpsman #Starlight
+
+- type: loadoutGroup
+  id: BrigmedicBackpack
+  name: loadout-group-brigmedic-backpack
+  loadouts:
+  - BrigmedicBackpack
+  - BrigmedicSatchel
+  - BrigmedicDuffel
+
+- type: loadoutGroup
+  id: BrigmedicOuterClothing
+  name: loadout-group-brigmedic-outerclothing
+  loadouts:
+  - BrigmedicCoat
+  - SecurityOfficerWintercoat
+  - CorpsmanCoat #Starlight
+
+- type: loadoutGroup
+  id: BrigmedicEyewear
+  name: loadout-group-brigmedic-eyewear
+  loadouts:
+  - BrigmedicGlasses
+  - BrigmedicHud
+
+- type: loadoutGroup
+  id: BrigmedicBelt
+  name: loadout-group-brigmedic-belt
+  loadouts:
+  - BrigmedicRig
+  - BrigmedicBelt #Starlight
+  - CorpsmanBelt #Starlight
+
+#Starlight Start
+- type: loadoutGroup 
+  id: BrigmedicGloves
+  name: loadout-group-brigmedic-gloves
+  loadouts:
+  - Nitrile
+  - BlackNitrile 
+#Starlight End
+
+- type: loadoutGroup
   id: SecurityHead
   name: loadout-group-security-head
   minLimit: 0
   loadouts:
   - SecurityHelmet
+  - SecurityHelmetPlate
+  - SecurityHelmetStabproof
+  - SecurityHelmetHeatAbsorbent
   - SecurityBeret
   - SecurityHat
   - TrooperHat
@@ -1042,6 +1124,9 @@
   loadouts:
   - ArmorVest
   - ArmorVestSlim
+  - ArmorVestPlate
+  - ArmorVestStab
+  - ArmorVestHeatAbsorb
   - SecurityOfficerWintercoat
 
 - type: loadoutGroup

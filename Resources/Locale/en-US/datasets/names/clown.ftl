@@ -50,3 +50,25 @@ names-clown-dataset-49 = Yorick
 names-clown-dataset-50 = Cutter
 names-clown-dataset-51 = Sweet Tooth
 names-clown-dataset-52 = Pogo
+
+# STARLIGHT
+
+names-clown-dataset-53 = Papa Honk
+names-clown-dataset-54 = Daddy Honk
+names-clown-dataset-55 = Bam Bam
+names-clown-dataset-56 = Happy Slappy
+names-clown-dataset-57 = Knick Knack
+names-clown-dataset-58 = Puddles
+names-clown-dataset-59 = Giblets
+names-clown-dataset-60 = Donk A Donk
+names-clown-dataset-61 = Boink
+names-clown-dataset-62 = Sourpuss
+names-clown-dataset-63 = Sulky
+names-clown-dataset-64 = Pickles
+names-clown-dataset-65 = Smokey
+names-clown-dataset-66 = Bibbly Bobbly
+names-clown-dataset-67 = Miss Happy
+names-clown-dataset-68 = Soggy Sock
+names-clown-dataset-69 = Muck Chucker
+names-clown-dataset-70 = Cheeky Chops
+names-clown-dataset-71 = Stinko

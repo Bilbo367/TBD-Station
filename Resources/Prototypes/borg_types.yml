@@ -153,6 +153,7 @@
 
   defaultModules:
   - BorgModuleTreatment
+  - BorgModuleDefibrillator
 
   radioChannels:
   - Science

@@ -29,7 +29,7 @@
   id: BasicAntagEventsTable
   table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
     children:
-    - id: ClosetSkeleton
+#    - id: ClosetSkeleton STARLIGHT
     - id: DragonSpawn
     - id: KingRatMigration
     - id: NinjaSpawn
@@ -41,6 +41,8 @@
     - id: DerelictCyborgSpawn
     - id: WizardSpawn
 
+    - id: AbductorsSpawn # Starlight
+    
 - type: entity
   id: BaseStationEvent
   parent: BaseGameRule
@@ -160,9 +162,9 @@
   id: DragonSpawn
   components:
   - type: StationEvent
-    weight: 6.5
-    earliestStart: 40
-    reoccurrenceDelay: 20
+    weight: 5.5 # 🌟Starlight🌟 Casualization
+    earliestStart: 50 # 🌟Starlight🌟 Casualization
+    reoccurrenceDelay: 45 # 🌟Starlight🌟 Casualization
     minimumPlayers: 20
     duration: null
   - type: SpaceSpawnRule
@@ -189,10 +191,10 @@
   id: NinjaSpawn
   components:
   - type: StationEvent
-    weight: 6
+    weight: 5 # 🌟Starlight🌟 Casualization
     duration: null
-    earliestStart: 30
-    reoccurrenceDelay: 20
+    earliestStart: 45 # 🌟Starlight🌟 Casualization
+    reoccurrenceDelay: 45 # 🌟Starlight🌟 Casualization
     minimumPlayers: 30
   - type: SpaceSpawnRule
   - type: AntagLoadProfileRule
@@ -219,6 +221,7 @@
         color: Green
         sound: /Audio/Misc/ninja_greeting.ogg
       components:
+      - type: ThermalVision
       - type: SpaceNinja
       - type: NpcFactionMember
         factions:
@@ -336,7 +339,7 @@
   - type: StationEvent
     startAnnouncement: station-event-gas-leak-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_Starlight/Announcements/attention.ogg
     endAnnouncement: station-event-gas-leak-end-announcement
     weight: 8
   - type: GasLeakRule
@@ -361,7 +364,7 @@
     startAnnouncement: station-event-power-grid-check-start-announcement
     endAnnouncement: station-event-power-grid-check-end-announcement
     startAudio:
-      path: /Audio/Announcements/power_off.ogg
+      path: /Audio/_Starlight/Announcements/attention.ogg
       params:
         volume: -4
     duration: 60
@@ -377,7 +380,7 @@
     startAnnouncement: station-event-solar-flare-start-announcement
     endAnnouncement: station-event-solar-flare-end-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_Starlight/Announcements/attention.ogg
     duration: 120
     maxDuration: 240
   - type: SolarFlareRule
@@ -403,7 +406,7 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-clog-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_Starlight/Announcements/attention.ogg
     earliestStart: 15
     minimumPlayers: 15
     weight: 5
@@ -417,10 +420,10 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
-    earliestStart: 20
+      path: /Audio/_Starlight/Announcements/attention.ogg
+    earliestStart: 40 # 🌟Starlight🌟 Casualization
     minimumPlayers: 15
-    weight: 5
+    weight: 3.5 # 🌟Starlight🌟 Casualization
     duration: 60
   - type: VentCrittersRule
     entries:
@@ -439,9 +442,9 @@
     startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
       path: /Audio/Announcements/attention.ogg
-    earliestStart: 20
+    earliestStart: 40 # 🌟Starlight🌟 Casualization
     minimumPlayers: 15
-    weight: 5
+    weight: 3.5 # 🌟Starlight🌟 Casualization
     duration: 60
   - type: VentCrittersRule
     entries:
@@ -459,10 +462,10 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
-    earliestStart: 20
+      path: /Audio/_Starlight/Announcements/attention.ogg
+    earliestStart: 40 # 🌟Starlight🌟 Casualization
     minimumPlayers: 15
-    weight: 5
+    weight: 3.5 # 🌟Starlight🌟 Casualization
     duration: 60
   - type: VentCrittersRule
     entries:
@@ -476,7 +479,7 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_Starlight/Announcements/attention.ogg
     earliestStart: 20
     minimumPlayers: 20
     weight: 1.5
@@ -524,8 +527,8 @@
   id: LoneOpsSpawn
   components:
   - type: StationEvent
-    earliestStart: 35
-    weight: 5.5
+    earliestStart: 55 # 🌟Starlight🌟 Casualization
+    weight: 4.5 # 🌟Starlight🌟 Casualization
     minimumPlayers: 20
     duration: 1
   - type: RuleGrids
@@ -540,6 +543,9 @@
       max: 1
       pickPlayer: false
       startingGear: SyndicateLoneOperativeGearFull
+      blacklist:
+        tags:
+          - Resomi
       roleLoadout:
       - RoleSurvivalNukie
       components:
@@ -559,13 +565,13 @@
   id: SleeperAgents
   components:
   - type: StationEvent
-    earliestStart: 30
-    weight: 8
+    earliestStart: 40 # 🌟Starlight🌟 Casualization
+    weight: 6 # 🌟Starlight🌟 Casualization
     minimumPlayers: 15
     maxOccurrences: 1 # can only happen once per round
     startAnnouncement: station-event-communication-interception
     startAudio:
-      path: /Audio/Announcements/intercept.ogg
+      path: /Audio/_Starlight/Announcements/attention.ogg
     duration: null # the rule has to last the whole round not 1 second
     occursDuringRoundEnd: false
   - type: AlertLevelInterceptionRule
@@ -599,6 +605,21 @@
       collection: Paracusia
 
 - type: entity
+  id: CluwneBeastSpawn
+  parent: BaseGameRule
+  components:
+  - type: StationEvent
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 6
+    duration: 30
+    maxOccurrences: 2
+  - type: VentCrittersRule
+    entries:
+      - id: SpawnPointGhostCluwneBeast
+        prob: 0.005
+
+- type: entity
   parent: BaseGameRule
   id: IonStorm
   components:
@@ -626,9 +647,10 @@
   - type: StationEvent
     startAudio:
       path: /Audio/Announcements/attention.ogg
-    weight: 5
+    weight: 2
     minimumPlayers: 25
     reoccurrenceDelay: 20
+    maxOccurrences: 2 
   - type: GreytideVirusRule
     accessGroups:
     - Cargo

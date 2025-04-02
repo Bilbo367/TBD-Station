@@ -31,6 +31,40 @@
       - MindRoleThief
       briefing:
         sound: "/Audio/Misc/thief_greeting.ogg"
+        
+- type: entity
+  parent: BaseGameRule
+  id: Changeling
+  components:
+  - type: ChangelingRule
+  - type: AntagSelection
+    agentName: changeling-roundend-name
+    definitions:
+    - prefRoles: [ Changeling ]
+      max: 3
+      playerRatio: 10
+      lateJoinAdditional: true
+      allowNonHumans: false
+      multiAntagSetting: None
+      mindRoles:
+      - MindRoleChangeling
+
+- type: entity
+  parent: BaseGameRule
+  id: Vampire
+  components:
+  - type: VampireRule
+  - type: AntagSelection
+    agentName: vampire-roundend-name
+    definitions:
+    - prefRoles: [ Vampire ]
+      max: 4
+      playerRatio: 10
+      lateJoinAdditional: true
+      allowNonHumans: false
+      multiAntagSetting: None
+      mindRoles:
+      - MindRoleVampire
 
 # Needs testing
 - type: entity

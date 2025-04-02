@@ -298,3 +298,25 @@
     exclusiveAntag: true
     roleType: TeamAntagonist
   - type: ZombieRole
+  
+# Changeling
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleChangeling
+  name: Changeling Role
+  components:
+  - type: MindRole
+    antagPrototype: Changeling
+  - type: ChangelingRole
+  
+# Vampire
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleVampire
+  name: Vampire Role
+  components:
+  - type: MindRole
+    antagPrototype: Vampire
+  - type: VampireRole

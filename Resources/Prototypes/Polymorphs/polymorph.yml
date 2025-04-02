@@ -95,6 +95,17 @@
     exitPolymorphSound: !type:SoundPathSpecifier
       path: /Audio/Magic/forcewall.ogg
 
+- type: polymorph
+  id: ForcedCluwneBeast
+  configuration:
+    entity: MobCluwneBeast
+    forced: true
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
+    transferName: false
+    transferDamage: false
+
 # this is a test for transferring some visual appearance stuff
 - type: polymorph
   id: TestHumanMorph
@@ -207,6 +218,21 @@
     revertOnCrit: false
     revertOnDeath: false
 
+#Vampire
+- type: polymorph
+  id: VampireMouse
+  configuration:
+    entity: MobMouse
+    revertOnDeath: true
+    revertOnCrit: true
+
+- type: polymorph
+  id: VampireBat
+  configuration:
+    entity: MobBat
+    revertOnDeath: true
+    revertOnCrit: true
+    
 # Temporary Jaunt
 # Don't make permanent jaunts until action system can be reworked to allow do afters and cooldown pausing
 - type: polymorph

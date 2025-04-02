@@ -1,24 +1,33 @@
 - type: npcFaction
   id: Dragon
   hostile:
-  - NanoTrasen
-  - Syndicate
-  - Xeno
-  - PetsNT
-  - Zombie
-  - Revolutionary
-  - AllHostile
-  - Wizard
+    - NanoTrasen
+    - Syndicate
+    - DungeonSyndicate
+    - DungeonSoviet
+    - Xeno
+    - PetsNT
+    - Zombie
+    - Revolutionary
+    - Abyss
+    - Vampire
+    - Changeling
+    - AllHostile
+    - Wizard
 
 - type: npcFaction
   id: NanoTrasen
   hostile:
   - SimpleHostile
   - Syndicate
+  - DungeonSyndicate
+  - DungeonSoviet
   - Xeno
   - Zombie
   - Revolutionary
-  - Dragon
+  - Abyss
+  - Vampire
+  - Changeling
   - AllHostile
   - Wizard
 
@@ -26,6 +35,7 @@
   id: Mouse
   hostile:
   - PetsNT
+  - Abyss
   - AllHostile
   - Wizard
 
@@ -39,6 +49,7 @@
   - SimpleHostile
   - Zombie
   - Xeno
+  - Abyss
   - AllHostile
   - Wizard
   - Dragon
@@ -48,10 +59,15 @@
   hostile:
   - NanoTrasen
   - Syndicate
+  - DungeonSyndicate
+  - DungeonSoviet
   - Passive
   - PetsNT
   - Zombie
   - Revolutionary
+  - Abyss
+  - Vampire
+  - Changeling
   - AllHostile
   - Wizard
   - Dragon
@@ -67,7 +83,11 @@
   - Xeno
   - PetsNT
   - Zombie
-  - Dragon
+  - DungeonSyndicate
+  - DungeonSoviet
+  - Abyss
+  - Vampire
+  - Changeling
   - AllHostile
   - Wizard
 
@@ -76,10 +96,15 @@
   hostile:
   - NanoTrasen
   - Syndicate
+  - DungeonSyndicate
+  - DungeonSoviet
   - Passive
   - PetsNT
   - Zombie
   - Revolutionary
+  - Abyss
+  - Vampire
+  - Changeling
   - AllHostile
   - Wizard
   - Dragon
@@ -91,9 +116,14 @@
   - SimpleNeutral
   - SimpleHostile
   - Syndicate
+  - DungeonSyndicate
+  - DungeonSoviet
   - Passive
   - PetsNT
   - Revolutionary
+  - Abyss
+  - Vampire
+  - Changeling
   - AllHostile
   - Wizard
   - Dragon
@@ -105,9 +135,53 @@
   - Zombie
   - SimpleHostile
   - Dragon
+  - DungeonSyndicate
+  - DungeonSoviet
+  - Abyss
+  - Vampire
+  - Changeling
+  - AllHostile
+  
+- type: npcFaction
+  id: Changeling
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Zombie
+  - Revolutionary
+  - AllHostile
+  
+- type: npcFaction
+  id: Vampire
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Zombie
+  - Revolutionary
+  - Xeno
+  - Changeling
+  - AllHostile
+  
+- type: npcFaction
+  id: HonkHostile
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Passive
+  - PetsNT
+  - Zombie
   - AllHostile
   - Wizard
 
+- type: npcFaction
+  id: HonkNeutral
+  hostile:
+  - SimpleHostile
+  - Syndicate
+  - Xeno
+  - Zombie
+  - AllHostile
+  
 - type: npcFaction
   id: AllHostile
   hostile:
@@ -122,6 +196,10 @@
   - Xeno
   - Zombie
   - Revolutionary
+  - HonkNeutral
+  - HonkHostile
+  - Vampire
+  - Changeling
   - Wizard
 
 - type: npcFaction

@@ -132,7 +132,8 @@
     - ElectronicsStatic
   - type: EmagLatheRecipes
     emagStaticPacks:
-    - SecurityAmmoStatic
+    - StarlightSecurityEmagWeaponsStatic
+    - StarlightSecurityAmmoStatic
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -191,7 +192,6 @@
     unlitRunningState: unlit-building
     staticPacks:
     - ChemistryStatic
-    - SurgeryStatic
     dynamicPacks:
     - AdvancedTools
     - ScienceEquipment
@@ -209,10 +209,16 @@
     - FauxTiles
   - type: EmagLatheRecipes
     emagDynamicPacks:
-    - SecurityAmmo
-    - SecurityExplosives
-    - SecurityEquipment
-    - SecurityWeapons
+    - StarlightSurgeryDynamic
+    - StarlightCyberlimbDynamic
+    - StarlightCyberOrgansDynamic
+    - StarlightImplantDynamic
+
+    - StarlightSecurityAmmoDynamic
+    - StarlightSecurityExplosives
+    - StarlightSecurityEquipment
+    - StarlightSecurityWeapons
+    - StarlightDefenseStatic
 
 - type: entity
   id: ProtolatheHyperConvection
@@ -264,9 +270,10 @@
     - CameraBoards
     - MechBoards
     - ShuttleBoards
+    - StarlightMechBoards
   - type: EmagLatheRecipes
     emagDynamicPacks:
-    - SecurityBoards
+    - StarlightSecurityBoards
   - type: MaterialStorage
     whitelist:
       tags:
@@ -315,6 +322,13 @@
     - BorgModules
     - MechParts
     - MechEquipment
+    - StarlightMechEquipment
+    - StarlightMechWeapon
+    - StarlightSecurityMechs
+    - StarlightMechParts
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - StarlightMechWeapon
   - type: MaterialStorage
     whitelist:
       tags:
@@ -391,15 +405,18 @@
     staticPacks:
     - SecurityEquipmentStatic
     - SecurityPracticeStatic
-    - SecurityAmmoStatic
+    - StarlightSecurityAmmoStatic
     - SecurityWeaponsStatic
     dynamicPacks:
-    - SecurityEquipment
-    - SecurityBoards
-    - SecurityExplosives
-    - SecurityAmmo
-    - SecurityWeapons
+    - StarlightDefenseStatic
+    - StarlightSecurityEquipment
+    - StarlightSecurityBoards
+    - StarlightSecurityExplosives
+    - StarlightSecurityAmmoDynamic
+    - StarlightSecurityWeapons
     - SecurityDisablers
+    - SecurityCyberLimbs
+    - StarlightSecurityMechsWeapons
   - type: MaterialStorage
     whitelist:
       tags:
@@ -432,7 +449,7 @@
       idleState: icon
       runningState: icon
       staticPacks:
-      - SecurityAmmoStatic
+      - StarlightSecurityAmmoStatic
     - type: MaterialStorage
       whitelist:
         tags:
@@ -469,8 +486,11 @@
     - RollerBedsStatic
     - MedicalClothingStatic
     - EmptyMedkitsStatic
-    - SurgeryStatic
     dynamicPacks:
+    - StarlightSurgeryDynamic
+    - StarlightCyberlimbDynamic
+    - StarlightCyberOrgansDynamic
+    - StarlightImplantDynamic
     - Chemistry
   - type: Machine
     board: MedicalTechFabCircuitboard

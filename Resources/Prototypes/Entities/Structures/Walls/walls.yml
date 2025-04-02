@@ -52,12 +52,21 @@
     resistance: 2
   - type: BlockWeather
   - type: SunShadowCast
+  - type: Ricochetable
+    chance: 0.4
 
 - type: entity
   parent: BaseWall
   id: WallBrick
   name: brick wall
   components:
+  - type: Pierceable
+    level: Metal
+  - type: Ricochetable
+    chance: 0.2
+  - type: Tag
+    tags:
+      - Wall
   - type: Sprite
     sprite: Structures/Walls/brick.rsi
   - type: Icon
@@ -251,6 +260,8 @@
   id: WallDiamond
   name: diamond wall
   components:
+  - type: Ricochetable
+    chance: 1
   - type: Tag
     tags:
       - Wall
@@ -405,6 +416,8 @@
   id: WallPlastic
   name: plastic wall
   components:
+  - type: Ricochetable
+    chance: 0.1
   - type: Tag
     tags:
       - Wall
@@ -451,6 +464,8 @@
   name: plastitanium wall
   suffix: indestructible
   components:
+    - type: Ricochetable
+      chance: 1
     - type: Tag
       tags:
         - Wall
@@ -583,6 +598,10 @@
   id: WallReinforced
   name: reinforced wall
   components:
+  - type: Pierceable
+    level: HardenedMetal
+  - type: Ricochetable
+    chance: 0.75
   - type: Sprite
     sprite: Structures/Walls/solid.rsi
   - type: Icon
@@ -826,6 +845,8 @@
     snap:
     - Wall
   components:
+  - type: Ricochetable
+    chance: 1
   - type: Transform
     anchored: true
   - type: Clickable
@@ -849,8 +870,6 @@
     damageModifierSet: StructuralMetallic
   - type: Physics
     bodyType: Static
-  - type: Reflect
-    reflectProb: 1
   - type: Pullable
   - type: Airtight
     noAirWhenFullyAirBlocked: false
@@ -955,7 +974,10 @@
           4: { state: shuttle_construct-4, visible: true}
           5: { state: shuttle_construct-5, visible: true}
   - type: Reflect
+    reflects: Energy
     reflectProb: 1
+  - type: Ricochetable
+    chance: 1
 
 - type: entity
   parent: BaseWall
@@ -1000,7 +1022,10 @@
     key: walls
     base: state
   - type: Reflect
+    reflects: Energy
     reflectProb: 1
+  - type: Ricochetable
+    chance: 1
 
 - type: entity
   parent: BaseWall
@@ -1069,6 +1094,8 @@
   - type: Icon
     sprite: Structures/Walls/solid_diagonal.rsi
     state: state0
+  - type: Ricochetable
+    chance: 0.4
 
 - type: entity
   parent: WallSolid
@@ -1114,6 +1141,8 @@
   id: WallUranium
   name: uranium wall
   components:
+  - type: Ricochetable
+    chance: 1
   - type: Sprite
     sprite: Structures/Walls/uranium.rsi
   - type: Icon
@@ -1155,6 +1184,8 @@
   name: wood wall
   description: The traditional greytide defense.
   components:
+  - type: Ricochetable
+    chance: 0
   - type: Sprite
     sprite: Structures/Walls/wood.rsi
   - type: Icon
@@ -1194,6 +1225,8 @@
   name: web wall
   description: Keeps the spiders in and the greytide out.
   components:
+  - type: Ricochetable
+    chance: 0
   - type: Clickable
   - type: MeleeSound
     soundGroups:
